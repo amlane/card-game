@@ -31,9 +31,11 @@ class App extends React.Component{
     return (
       <div className="App">
         <h1>Card Game</h1>
+        <div className="deck-of-cards">
         {this.state.cards.map( card => {
           return <img className="card" src={card.image} key={`${card.value} ${card.suit}`} alt={`${card.value} of ${card.suit}`} />
         } )}
+        </div>
       </div>
     );
   }
